@@ -15,6 +15,7 @@ Zero-config setup (works out of the box)
 Built-in test runner, assertions, and mocking
 Fast tests with parallel execution
 Automatic test discovery (*.test.js, *.spec.js)
+
 -----------------------------------------------------
 
 Webpack is a module bundler.**[Bundle & optimize assets]
@@ -28,6 +29,7 @@ Why it’s used
 Handles imports (import x from './file')
 Optimizes code for production
 Supports loaders (Babel, CSS, images)
+
 -------------------------------------------
 
 A parser is a tool that reads code and understands its structure.
@@ -35,6 +37,7 @@ A parser is a tool that reads code and understands its structure.
 What it does **[Understand & analyze code]
 Converts code into a structure (AST – Abstract Syntax Tree)
 Helps tools analyze or transform code
+
 ---------------------------------------------
 
 Vite is a modern frontend build tool (alternative to Webpack). 
@@ -49,6 +52,7 @@ Why developers like Vite
 Instant startup
 Faster hot reload
 Less configuration than Webpack
+
 -----------------------------------------------
 
 Parcel is a web application bundler, similar to Webpack and Vite, but with a big focus on zero configuration.
@@ -65,6 +69,7 @@ Zero-config (just works)
 Fast builds using caching
 Automatic code splitting
 Built-in support for many file types
+
 ---------------------------------------------
 
 npm install -D parcel (meaning of -D)
