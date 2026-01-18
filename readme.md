@@ -1,3 +1,18 @@
+IMP COMMANDS - 
+
+npm init
+npm install -D parcel
+npx parcel index.html
+npm install react / npm i react
+npm install react-dom / npm i react-dom
+
+-----------------------------
+
+D:\Namaste-React>npx parcel index.html
+Server running at http://localhost:1234
+✨ Built in 1.01s
+
+------------------------------------------
 
 ReactElement(Object)=>HTML(Browser Understands)
 
@@ -57,12 +72,18 @@ Less configuration than Webpack
 
 Parcel is a web application bundler, similar to Webpack and Vite, but with a big focus on zero configuration.
 
-🚀 What Parcel does
-Bundles JavaScript, CSS, HTML, images
-Automatically handles dependencies
-Runs a dev server
-Optimizes code for production
-You usually don’t need config files to start.
+# Parcel
+- Dev Build
+- Local Server
+- HMR = Hot module replacement
+- File watching Algorithm - written in c++
+
+# 🚀 What Parcel does
+- Bundles JavaScript, CSS, HTML, images
+- Automatically handles dependencies
+- Runs a dev server
+- Optimizes code for production
+- You usually don’t need config files to start.
 
 ✨ Why Parcel is popular
 Zero-config (just works)
