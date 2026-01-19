@@ -133,4 +133,31 @@ There are 2 types of dependency
 -------------------------------
 
 
+# props- Normal argument to a function
+- similiar to a pass argument to a function 
+- props are read-only: A child component cannot modify its props. They are meant to be immutable.
+- Props are passed down from parent to child, allowing for reusable components.
+- You can pass any type of data as props: strings, numbers, arrays, objects, functions, etc.
+
+-----------------------------------
+
+# config driven UI
+A Config-Driven UI means your UI is controlled by data (config) instead of hard-coding everything in JSX.
+Change the config, and the UI changes automatically — no JSX edits needed.
+
+Why Config-Driven UI?
+- Reusable components
+- Dynamic UI from API data
+- Easy to scale
+- Used in real apps (Swiggy, Netflix, Amazon)
+
+** Config-Driven UI means rendering UI based on configuration/data received from backend instead of hard-coding UI elements.
+
+- index as a key is generally considered an anti-pattern, especially in UI frameworks like React, Vue, or similar virtual-DOM systems.
+- Keys are used to preserve identity of items between renders. An index does not represent identity—only position.
+Rule of thumb
+- If the list can change, index-as-key is wrong.
+            more bluntly:
+- Keys represent identity, not position.
+- Not using (not acceptable) <<<< index <<<<< unique id (best practice)
 
