@@ -1,0 +1,92 @@
+
+
+//   // if no dependency array => useEffect is called on every render.
+//   // if dependency array is empty =[] => useEffect is called on initial render(just once)
+//   //if dependency array is [btnNameReact] => called everytime btnNameReact is updated 
+  
+
+import  { useEffect, useState, useContext } from "react";
+import { LOGO_URL } from "../utils/constants";
+import { Link } from "react-router-dom";
+import useOnlineStatus from "../utils/useOnlineStatus";
+import UserContext from "./UserContext";
+import React from "react";
+import { useSelector } from "react-redux";
+
+const Header = () => {
+  const [btnNameReact, setBtnNameReact] = useState("Login");
+  const onlineStatus = useOnlineStatus();
+
+  const { loggedInUser } = useContext(UserContext);
+
+  // Subscribing to store using a selector
+
+  const cardItems=useSelector((store)=>store.card.items);
+  console.log(cardItems);
+
+
+  // console.log("Header render");
+
+  // useEffect(() => {
+  //   console.log("useEffect called");
+  // }, [btnNameReact]);
+
+  return (
+    <div className="flex justify-between bg-pink-100 shadow-lg m-2">
+      <div className="logo-container">
+        <img className="w-56" src={LOGO_URL} alt="logo" />
+      </div>
+
+      <div className="flex items-center justify-between">
+        <ul className="flex p-4 m-4 items-center">
+          <li className="px-4">
+            Online Status : {onlineStatus ? "✅" : "🟥"}
+          </li>
+
+          <li className="px-4">
+            <Link to="/">Home</Link>
+          </li>
+
+          <li className="px-4">
+            <Link to="/about">About Us</Link>
+          </li>
+
+          <li className="px-4">
+            <Link to="/contact">Contact Us</Link>
+          </li>
+
+          <li className="px-4">
+            <Link to="/grocery">Grocery</Link>
+          </li>
+
+          <li className="px-4 font-bold text-xl">
+            <Link to="/Card">Card - ({cardItems.length} items)</Link>
+           
+          </li>
+
+         
+
+          <button
+            className="login px-4"
+            onClick={() =>
+              btnNameReact === "Login"
+                ? setBtnNameReact("Logout")
+                : setBtnNameReact("Login")
+            }
+          >
+            {btnNameReact}
+          </button>
+
+
+          {/* Logged-in user from Context */}
+          <li className="px-4 font-bold text-purple-700">
+            {loggedInUser}
+          </li>
+
+        </ul>
+      </div>
+    </div>
+  );
+};
+
+export default Header;
